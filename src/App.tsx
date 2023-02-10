@@ -1,7 +1,5 @@
-import Layout from "./components/atoms/Layout";
+import RouterProvider from "./providers/RouterProvider";
 
 export default function App() {
-  return(
-    <Layout />
-  )
+  return <RouterProvider />;
 }

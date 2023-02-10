@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+// Media queries
+@mixin mobile {
+  @media only screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+// Flexbox
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Typography
+@mixin truncateText($widthLimit: 100%) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: $widthLimit;
+}
+
+// Styling
+@function toRem($pixels) {
+  $remValue: calc($pixels / $fontSizeBase) + rem;
+  @return $remValue;
+}

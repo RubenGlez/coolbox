@@ -1,12 +1,10 @@
-import { headerContainer, appName, avatar } from "./styles.module.scss";
-
 export default function Header() {
   return (
-    <header className={headerContainer}>
+    <header>
       <div>
-        <span className={appName}>coolbox</span>
+        <span>coolbox</span>
       </div>
-      <div className={avatar}>
+      <div>
         <span>U</span>
       </div>
     </header>

@@ -13,15 +13,6 @@ export const mainConfig: Configuration = {
     rules,
   },
   resolve: {
-    extensions: [
-      ".js",
-      ".ts",
-      ".jsx",
-      ".tsx",
-      ".css",
-      ".json",
-      ".scss",
-      ".sass",
-    ],
+    extensions: [".js", ".ts", ".jsx", ".tsx", ".css", ".json"],
   },
 };

@@ -13,6 +13,7 @@ const router = createHashRouter([
         path: ROUTES.CONVERSION,
         element: <Conversion />,
         errorElement: <h1>Something went wrong</h1>,
+        index: true,
       },
       {
         path: ROUTES.OTHER,

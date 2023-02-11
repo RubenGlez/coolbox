@@ -1,4 +1,3 @@
-import path from "path";
 import type { ModuleOptions } from "webpack";
 
 export const rules: Required<ModuleOptions>["rules"] = [
@@ -28,27 +27,5 @@ export const rules: Required<ModuleOptions>["rules"] = [
         transpileOnly: true,
       },
     },
-  },
-  {
-    test: /\.s[ac]ss$/i,
-    use: [
-      "style-loader",
-      {
-        loader: "css-loader",
-        options: {
-          modules: {
-            mode: "local",
-            auto: true,
-            exportGlobals: true,
-            localIdentName: "[path][name]__[local]--[hash:base64:5]",
-            localIdentContext: path.resolve(__dirname, "src"),
-            namedExport: true,
-            exportLocalsConvention: "camelCaseOnly",
-            exportOnlyLocals: false,
-          },
-        },
-      },
-      "sass-loader",
-    ],
   },
 ];

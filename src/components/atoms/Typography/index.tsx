@@ -1,7 +1,7 @@
 import { TypographyBase } from "./styles";
-import { MainProps } from "./types";
+import { TypographyProps } from "./types";
 
-const variants = {
+const tagVariants = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -16,10 +16,11 @@ export default function Typography({
   color = "primary",
   align = "left",
   variant = "body1",
-}: MainProps) {
-  const as = variants[variant] as never;
+}: TypographyProps) {
+  const tag = tagVariants[variant] as never;
+
   return (
-    <TypographyBase as={as} color={color} align={align}>
+    <TypographyBase as={tag} color={color} align={align} variant={variant}>
       {children}
     </TypographyBase>
   );

@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-export interface MainProps {
+export interface TypographyProps {
   children: ReactNode;
-  color?: "primary" | "secondary" | "highlight" | "alt";
+  color?: "primary" | "secondary" | "active" | "inactive" | "alt";
   align?: "left" | "center" | "right";
   variant?:
     | "h1"

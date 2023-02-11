@@ -1,4 +1,4 @@
-import { createHashRouter, RouterProvider as RP } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "../../components/organisms/Layout";
 import Conversion from "../../pages/Conversion";
 import { ROUTES } from "./routes";
@@ -10,10 +10,9 @@ const router = createHashRouter([
     errorElement: <h1>Something went wrong</h1>,
     children: [
       {
-        path: ROUTES.CONVERSION,
+        index: true,
         element: <Conversion />,
         errorElement: <h1>Something went wrong</h1>,
-        index: true,
       },
       {
         path: ROUTES.OTHER,
@@ -24,6 +23,6 @@ const router = createHashRouter([
   },
 ]);
 
-export default function RouterProvider() {
-  return <RP router={router} />;
+export default function Router() {
+  return <RouterProvider router={router} />;
 }

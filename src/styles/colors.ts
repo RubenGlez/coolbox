@@ -2,7 +2,8 @@ export const COLORS = {
   TEXT: {
     PRIMARY: "#FFFFFF",
     SECONDARY: "#FFFFFF",
-    HIGHLIGHT: "#FFFFFF",
+    ACTIVE: "#FFFFFF",
+    INACTIVE: "#FFFFFF",
     ALT: "#FFFFFF",
   },
   BACKGROUND: {

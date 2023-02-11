@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ROUTES } from "../../../providers/RouterProvider/routes";
+import { ROUTES } from "../../../providers/Router/routes";
 
 export default function Navigation() {
   return (

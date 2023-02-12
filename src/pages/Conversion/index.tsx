@@ -1,11 +1,14 @@
-import Typography from "../../components/atoms/Typography";
+import FileInput from "../../components/molecules/FileInput";
+import { ConversionPageWrapper } from "./styles";
 
-export default function Conversion() {
+export default function ConversionPage() {
+  const handleFile = (files: FileList) => {
+    alert("Number of files: " + files.length);
+  };
+
   return (
-    <div>
-      <Typography variant="h1" color="active">
-        hola caracola
-      </Typography>
-    </div>
+    <ConversionPageWrapper>
+      <FileInput handleFile={handleFile} />
+    </ConversionPageWrapper>
   );
 }

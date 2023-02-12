@@ -1,17 +1,16 @@
-import { Link } from "react-router-dom";
+import Tabs from "../../../components/molecules/Tabs";
 import { ROUTES } from "../../../providers/Router/routes";
+import { NavigationWrapper } from "./styles";
 
 export default function Navigation() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to={ROUTES.CONVERSION}>Conversion</Link>
-        </li>
-        <li>
-          <Link to={ROUTES.OTHER}>Other</Link>
-        </li>
-      </ul>
-    </nav>
+    <NavigationWrapper>
+      <Tabs
+        items={[
+          { to: ROUTES.ROOT, label: "Conversion" },
+          { to: ROUTES.OTHER, label: "Other" },
+        ]}
+      />
+    </NavigationWrapper>
   );
 }

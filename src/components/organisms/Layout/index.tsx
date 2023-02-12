@@ -1,5 +1,4 @@
-import Main from "../Main";
-import Header from "../Header";
+import Header from "../../molecules/Header";
 import Navigation from "../Navigation";
 import { Outlet } from "react-router-dom";
 import { LayoutWrapper } from "./styles";
@@ -9,9 +8,9 @@ export default function Layout() {
     <LayoutWrapper>
       <Header />
       <Navigation />
-      <Main>
+      <main>
         <Outlet />
-      </Main>
+      </main>
     </LayoutWrapper>
   );
 }
